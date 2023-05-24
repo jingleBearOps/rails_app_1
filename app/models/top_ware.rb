@@ -1,0 +1,2 @@
+class TopWare < ApplicationRecord
+end

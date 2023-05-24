@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @top_ware %>
+
+<div>
+  <%= link_to "Edit this top ware", edit_top_ware_path(@top_ware) %> |
+  <%= link_to "Back to top wares", top_wares_path %>
+
+  <%= button_to "Destroy this top ware", @top_ware, method: :delete %>
+</div>
