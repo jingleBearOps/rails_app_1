@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_24_215431) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_24_231712) do
+  create_table "clothings", force: :cascade do |t|
+    t.string "cloth_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "top_wares", force: :cascade do |t|
     t.string "style"
     t.text "description"
