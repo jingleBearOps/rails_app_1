@@ -13,6 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_05_24_231712) do
   create_table "clothings", force: :cascade do |t|
     t.string "cloth_type"
+    t.text "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
