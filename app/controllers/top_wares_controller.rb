@@ -22,7 +22,6 @@ class TopWaresController < ApplicationController
   # POST /top_wares or /top_wares.json
   def create
     @top_ware = TopWare.new(top_ware_params)
-
     respond_to do |format|
       if @top_ware.save
         format.html { redirect_to top_ware_url(@top_ware), notice: "Top ware was successfully created." }
