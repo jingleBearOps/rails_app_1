@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Top wares</h1>
+
+<div id="top_wares">
+  <% @top_wares.each do |top_ware| %>
+    <tr>
+      <td><%= render top_ware %></td>
+      <td><%= link_to "Show this top ware", top_ware %></td>
+      <td><%= link_to "Destroy this top ware", top_ware_path(top_ware), data: {turbo_method: :delete } %></td>
+      <td><%= link_to "Edit this top ware", edit_top_ware_path(top_ware)%></td>
+    </tr>
+    <p> </p>
+  <% end %>
+</div>
+
+<%= link_to "New top ware", new_top_ware_path %>
