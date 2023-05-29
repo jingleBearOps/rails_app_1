@@ -8,6 +8,7 @@ class TopWaresController < ApplicationController
 
   # GET /top_wares/1 or /top_wares/1.json
   def show
+    #set_top_ware
   end
 
   # GET /top_wares/new
@@ -17,6 +18,7 @@ class TopWaresController < ApplicationController
 
   # GET /top_wares/1/edit
   def edit
+    #set_top_ware
   end
 
   # POST /top_wares or /top_wares.json
@@ -35,6 +37,7 @@ class TopWaresController < ApplicationController
 
   # PATCH/PUT /top_wares/1 or /top_wares/1.json
   def update
+    #set_top_ware
     respond_to do |format|
       if @top_ware.update(top_ware_params)
         format.html { redirect_to top_ware_url(@top_ware), notice: "Top ware was successfully updated." }
@@ -48,6 +51,7 @@ class TopWaresController < ApplicationController
 
   # DELETE /top_wares/1 or /top_wares/1.json
   def destroy
+    #set_top_ware
     @top_ware.destroy
 
     respond_to do |format|
