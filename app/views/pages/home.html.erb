@@ -1,14 +1,22 @@
-<div class="container" id="home-container">
-    <div class="jumbotron text-center text-white" >
-        <h1 class="display-4">Welcome to My Page</h1>
-        <h1 class="display-4">This is the home page</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <div class="lm-btn">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
+
+<div id="page-content">
+    <div class="container" id="home-container">
+        <div class="jumbotron text-center text-white" >
+            <h1 class="display-4">Welcome to My Page</h1>
+            <h1 class="display-4">This is the home page</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <div class="lm-btn">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </div>
         </div>
     </div>
+    <%= link_to "About page",  about_path %>
+    <%= link_to "Top Wares",  top_wares_path %>
 </div>
-<%= link_to "About page",  about_path %>
-<%= link_to "Top Wares",  top_wares_path %>
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+        <small>Copyright &copy; Your Website&nbsp;</small>
+    </div>
+</footer>
