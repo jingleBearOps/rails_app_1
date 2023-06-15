@@ -3,7 +3,7 @@
 
 
 .navbar{
-    background-color: #d9f2fa !important;
+    background-color: black !important;
 }
 
 .nav-link{
@@ -19,7 +19,17 @@
 }
 #home-container{
     margin-top: 25px;
-    background-color: orange;
+    // background-color: orange;
+}
+.jumbotron{
+    background-image: url('home_page_img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 480px;
+    h1 {
+        color: white;
+    }
 }
 .lm-btn{
     padding-bottom: 5px;
