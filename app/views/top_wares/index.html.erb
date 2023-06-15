@@ -1,17 +1,47 @@
-<p style="color: green"><%= notice %></p>
+<div id="page-content">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Top wares</h1>
+  <h1 class = "text-center mt-4">Listing all top wares</h1>
+  <div class = "container">
+    <% @top_wares.each do |top_ware| %>
+      <div class = "row justify-content-md-center">
+        <div class="col-8 mt-4">
+            <div class="card text-center shadow mb-5 bg-white rounded">
+              <div class="card-header font-italic">
+                By Jingzhuo
+              </div>
+              <div class="card-body">
+                <h2 class="card-title text-secondary"><%= link_to top_ware.description, edit_top_ware_path(top_ware), class:"text-secondary text-decoration-none" %></h2>
+                <h5 class="card-style"><strong>Style: </strong><%= top_ware.style %></h5>
+                <h5 class="card-price"><strong>Price: </strong><%= top_ware.price %></h5>
+                <h5 class="card-origin"><strong>Origin: </strong><%= top_ware.origin %></h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <%= link_to "Views and Edit", edit_top_ware_path(top_ware), class: "btn btn-primary btn-lg" %>
+                <%= link_to "Deletes", top_ware_path(top_ware), method: :delete, data:{data: {turbo_method: :delete }, confirm: "Are you sure?"}, class: "btn btn-danger btn-lg" %>
+              </div>
+              <div class="card-footer text-muted">
+                2 days ago
+              </div>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div id="top_wares">
+    <% @top_wares.each do |top_ware| %>
+      <tr>
+        <td><%= render top_ware %></td>
+        <td><%= link_to "Destroy this top ware", top_ware_path(top_ware), data: {turbo_method: :delete } %></td>
+        <td><%= link_to "Edit this top ware", edit_top_ware_path(top_ware)%></td>
+      </tr>
+      <p> </p>
+    <% end %>
+  </div>
 
-<div id="top_wares">
-  <% @top_wares.each do |top_ware| %>
-    <tr>
-      <td><%= render top_ware %></td>
-      <td><%= link_to "Show this top ware", top_ware %></td>
-      <td><%= link_to "Destroy this top ware", top_ware_path(top_ware), data: {turbo_method: :delete } %></td>
-      <td><%= link_to "Edit this top ware", edit_top_ware_path(top_ware)%></td>
-    </tr>
-    <p> </p>
-  <% end %>
+  <%= link_to "New top ware", new_top_ware_path %>
 </div>
-
-<%= link_to "New top ware", new_top_ware_path %>
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+        <small>Copyright &copy;<%= link_to 'Jingzhuo Tian', 'https://github.com/jingleBearOps', class:"text-white text-decoration-none" %></small>
+    </div>
+</footer>
