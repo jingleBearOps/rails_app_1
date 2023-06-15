@@ -1,0 +1,24 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+
+.navbar{
+    background-color: #d9f2fa !important;
+}
+
+.nav-link{
+    color: red !important;
+}
+#logo{
+    color: pink !important;
+    float: left;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+
+}
+
+h1 {
+    color: #857449;
+  }
